@@ -1,4 +1,4 @@
-package com.example.lottietraining.fragments
+package com.example.lottietraining.presentation.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

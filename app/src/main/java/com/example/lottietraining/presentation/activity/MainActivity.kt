@@ -1,10 +1,12 @@
-package com.example.lottietraining
+package com.example.lottietraining.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.commit
-import com.example.lottietraining.fragments.SplashFragment
-import com.example.lottietraining.fragments.WelcomeFragment
+import androidx.fragment.app.commitNow
+import com.example.lottietraining.R
+import com.example.lottietraining.presentation.fragments.SplashFragment
+import com.example.lottietraining.presentation.fragments.WelcomeFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             val splashFragment = SplashFragment {
                 setWelcomeFragment()
             }
-            supportFragmentManager.commit {
+            supportFragmentManager.commitNow {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, splashFragment)
             }
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun setWelcomeFragment() {
-        supportFragmentManager.commit {
+        supportFragmentManager.commitNow {
             val welcomeFragment = WelcomeFragment()
             setReorderingAllowed(true)
             replace(R.id.fragment_container_view, welcomeFragment)

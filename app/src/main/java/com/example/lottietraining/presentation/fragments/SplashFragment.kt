@@ -1,4 +1,4 @@
-package com.example.lottietraining.fragments
+package com.example.lottietraining.presentation.fragments
 
 import android.animation.Animator
 import android.os.Bundle
